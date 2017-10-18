@@ -22,9 +22,9 @@ function readyFunction(){
 		}
 	];
 	for (var i = 0; i<data.length; i++) {
-		if (data.text) {
-			var newDiv = document.getElementById("#news");
-			newDiv += "<p><button type='button' class='btn btn-default' datahref='"+data.href+"''><span class='glyphicon glyphicon-star'></span> "+data.text+"</button></p>";
+		if (data[i].text) {
+			var newDiv = document.getElementById("news");
+			newDiv.innerHTML += "<p><button type='button' class='btn btn-default' datahref='"+ data[i].href+"''><span class='glyphicon glyphicon-star'></span> "+data[i].text+"</button></p>";
 		}
 	}
 
@@ -32,8 +32,8 @@ function readyFunction(){
 	for(var i = 0; i<btnsArray.length;i++)
 	{
 		btnsArray[i].addEventListener("click",function(event){
-			if (!target.datahref) {
-				document.location = target.datahref;
+			if (!event.target.datahref) {
+				document.location = event.target.datahref;
 			}
 		});
 	}
