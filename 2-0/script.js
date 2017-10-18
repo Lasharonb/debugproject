@@ -32,7 +32,7 @@ function readyFunction(){
 	for(var j = 0; j<btnsArray.length;j++)
 	{
 		btnsArray[j].addEventListener("click",function(event){
-			if (!event.target.attributes.datahref.value) {
+			if (event.target.attributes) {
 				document.location =  event.target.attributes.datahref.value;
 			}
 		});
