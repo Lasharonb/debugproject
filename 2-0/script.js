@@ -29,11 +29,11 @@ function readyFunction(){
 	}
 
 	var btnsArray = document.getElementsByTagName("button");
-	for(var i = 0; i<btnsArray.length;i++)
+	for(var j = 0; j<btnsArray.length;j++)
 	{
-		btnsArray[i].addEventListener("click",function(event){
-			if (!event.target.datahref) {
-				document.location = event.target.datahref;
+		btnsArray[j].addEventListener("click",function(event){
+			if (!event.target.attributes.datahref.value) {
+				document.location =  event.target.attributes.datahref.value;
 			}
 		});
 	}
