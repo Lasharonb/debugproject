@@ -1,15 +1,15 @@
 function readyFunction(){
 
-	var items = document.getElementsByClassName("list-group-items");
+	var items = document.getElementsByClassName("list-group-item");
 	for(var i = 0; i<items.length;i++)
 	{
-		items[i].addEventListener("click",function(event) {
+			items[i].addEventListener("click",function(event) {
 
 			for(var j = 0; j<event.target.childNodes.length;j++)
 			{
 				if(event.target.childNodes.tagname=='SPAN')
 				{
-					var num = parseInt(event.target.childNodes[j].innerHTML);
+					var num = parseInt(event.target.childNodes[j].innerHTML,10);
 					num--;
 					if (num <= 0) {
 						num = '';
