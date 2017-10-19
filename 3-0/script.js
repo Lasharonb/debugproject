@@ -7,7 +7,7 @@ function readyFunction(){
 
 			for(var j = 0; j<event.target.childNodes.length;j++)
 			{
-				if(event.target.childNodes.tagname=='SPAN')
+				if(event.target.childNodes[j].tagName=='SPAN')
 				{
 					var num = parseInt(event.target.childNodes[j].innerHTML,10);
 					num--;
